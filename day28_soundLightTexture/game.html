@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="./imgs/creeper_icon.png">
+	<link rel="stylesheet" href="./css/game.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<title>击倒吧！苦力怕！</title>
+</head>
+
+<body>
+	<div id="stats"></div>
+	<!-- BGM src: https://www.youtube.com/watch?v=E3--ZT1Bdns -->
+	<audio id="bgm" src="./music/bgm.mp3"></audio>
+	<!-- explosionMusic src: https://www.youtube.com/watch?v=RK0WyUqrI54 -->
+	<audio id="explosionMusic" src="./music/explosion.mp3"></audio>
+	<!-- gunshot src: https://www.youtube.com/watch?v=nUa-6-R4-0s -->
+	<!-- <audio id="gunshot" src="./music/gunshot6.mp3"></audio> -->
+	<div id="blocker">
+		<div id="instructions">
+			<header class="masthead">
+				<div class="container d-flex h-100 align-items-center">
+					<div class="mx-auto text-center">
+						<button onclick="window.location.href='index.html'" type="button"
+							class="btn btn-danger">回主菜单</button>
+						<button id="start" type="button" class="btn btn-primary">开始游戏</button>
+						<button id="restart" onclick="window.location.href='game.html'" type="button"
+							class="btn btn-danger">重新开始</button>
+						<div class="operation">
+							W, A, S, D：控制方向<br />
+							SPACE：跳跃<br />
+							MOUSE：转动视角<br />
+							左键：射击<br />
+							右键：叠砖<br />
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<div class="game_info">
+		<div>分数：<div id="score"></div>
+		</div>
+		<div>剩余时间：<div id="remainingTime"></div>
+		</div>
+	</div>
+
+	<script src="./lib/three.min.js"></script><!-- r98 -->
+	<script src="./lib/cannon.min.js"></script><!-- 0.6.2 -->
+	<!-- <script src="./lib/OrbitControls.js"></script> -->
+	<script src="./lib/Stats.min.js"></script><!-- r16 -->
+	<script src="./lib/dat.gui.min.js"></script><!-- 0.7.3 -->
+	<script src="./lib/Tween.min.js"></script><!-- 17.2.0 -->
+	<script src="./lib/Tone.min.js"></script>
+	<script src="./lib/PointerLockControls.js"></script>
+	<script src="./lib/OBJLoader.js"></script>
+	<!-- <script src="./lib/CannonDebugRenderer.js"></script> -->
+	<script src="./js/creeperModule.js"></script>
+	<script src="./js/pointsSceneModule.js"></script>
+	<script src="./js/datGuiControlModule.js"></script>
+	<script src="./js/pointerLockControlsModule.js"></script>
+	<script src="./js/explosionModule.js"></script>
+	<script src="./js/game.js"></script>
+</body>
+
+</html>
